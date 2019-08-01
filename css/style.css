@@ -1,0 +1,292 @@
+/* GENERAL SETTINGS */
+@import url('https://fonts.googleapis.com/css?family=Caveat|Raleway');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #222222;
+    background-image: url(../images/basic-texture-bg.png);
+    background-size: 100%;
+    font-size: 1.5em;
+}
+
+nav {
+    width: 100%;
+    text-align: right;
+}
+
+nav a {
+    font-size: 0.8em;
+    text-decoration: none;
+    margin-left: 50px;
+    color: #C60C30;
+}
+
+nav a:hover {
+    color: white;
+}
+
+h1 {
+    font-family: 'Caveat', serif;
+    text-align: center;
+}
+
+#title {
+    text-align: center;
+}
+
+#startbutton {
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 225px;
+    background-color: #C60C30;
+    padding: 10px;
+    color: white;
+    position: absolute;
+    cursor: pointer;
+}
+
+#startbuttonwrapper {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.startbuttonhidden {
+    display: none;
+}
+
+#scene {
+    width: 800px;
+    margin: auto;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.sailaway {
+    background-image: url(../images/sail-away-bg.png);
+    background-size: 100%;
+    width: 800px;
+    margin: auto;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+#denmark {
+    width: 238px;
+    height: 243px;
+    position: absolute;
+    float: left;
+    left: 0;
+    bottom: 10%;
+    background-image: url(../images/dk-drinking.png);
+    background-repeat: no-repeat;
+}
+
+#norway {
+    width: 300px;
+    height: 270px;
+    position: absolute;
+    right: 0;
+    bottom: 10%;
+}
+
+.hiddenspeech {
+    display: none;
+}
+
+.norspeech1 {
+    content: Hei Danmark!;
+    font-family: 'Caveat', serif;
+    font-size: 1.3em;
+    float: right;
+    padding-top: 75px;
+    text-align: center;
+    background-image: url(../images/speechbg-no.png);
+    background-size: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 130px;
+    position: absolute;
+    right: 0;
+    animation: norSpeaking1 1s forwards;
+    animation-delay: 3s
+}
+
+@keyframes norSpeaking1 {
+    100% {
+        opacity: 0
+    }
+}
+
+.norspeech2 {
+    content: What is that on your horn?;
+    font-family: 'Caveat', serif;
+    font-size: 1.3em;
+    float: right;
+    padding-top: 75px;
+    text-align: center;
+    background-image: url(../images/speechbg-no.png);
+    background-size: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 130px;
+    position: absolute;
+    right: 0;
+    animation: norSpeaking2 1s forwards;
+    animation-delay: 3s
+}
+
+@keyframes norSpeaking2 {
+    100% {
+        opacity: 0
+    }
+}
+
+
+.dkspeech1 {
+    content: Hlæøl;
+    font-family: 'Caveat', serif;
+    float: left;
+    font-size: 1.3em;
+    padding-top: 75px;
+    text-align: center;
+    background-image: url(../images/speechbg-dk.png);
+    background-size: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 130px;
+    position: absolute;
+    left: 0;
+    animation: dkSpeaking1 1s forwards;
+    animation-delay: 3s
+}
+
+@keyframes dkSpeaking1 {
+    100% {
+        opacity: 0
+    }
+}
+
+.dkspeech2 {
+    content: It is the... PØLSE-HORN;
+    font-family: 'Caveat', serif;
+    float: left;
+    font-size: 1.3em;
+    padding-top: 75px;
+    text-align: center;
+    background-image: url(../images/speechbg-dk.png);
+    background-size: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 130px;
+    position: absolute;
+    left: 0;
+    animation: dkSpeaking2 1s forwards;
+    animation-delay: 3s
+}
+
+@keyframes dkSpeaking2 {
+    100% {
+        opacity: 0
+    }
+}
+
+/* ANIMATIONS */
+.dkDrinking {
+    animation: drinking 3s steps(7) reverse;
+    animation-iteration-count: 1;
+}
+
+.dkDrinkingForever {
+    animation: drinking 3s steps(7) reverse infinite;
+}
+
+@keyframes drinking {
+    100% {
+        background-position: -2100px;
+    }
+}
+
+.norWalking {
+    background-image: url(../images/no-walking.png);
+    background-repeat: no-repeat;
+    animation: norWalking 3s steps(9) forwards reverse;
+}
+
+@keyframes norWalking {
+    100% {
+        background-position: -2590px;
+    }
+}
+
+.norConfused {
+    background-image: url(../images/no-thinking.png);
+    background-repeat: no-repeat;
+    animation: norConfused 2s steps(4);
+    animation-iteration-count: 2;
+
+}
+
+@keyframes norConfused {
+    100% {
+        background-position: -1200px;
+    }
+}
+
+.norDrinking {
+    background-image: url(../images/no-drinking.png);
+    background-position: 100px;
+    animation: norDrinking 3s steps(7) infinite;
+    background-repeat: no-repeat;
+    width: 300px;
+}
+
+@keyframes norDrinking {
+    100% {
+        background-position: -2000px;
+    }
+}
+
+/* OPTIONS CONTAINER */
+
+#button1 {
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    background-color: #C60C30;
+    padding: 10px;
+    float: left;
+    color: white;
+    cursor: pointer;
+}
+
+#button2 {
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    background-color: #C60C30;
+    padding: 10px;
+    float: right;
+    color: white;
+    cursor: pointer;
+}
+
+#buttoncontainer {
+    max-width: 700px;
+    margin: auto;
+}
+
+.hiddencontainer {
+    display: none;
+}
+
+.displaycontainer {
+    display: block;
+}
